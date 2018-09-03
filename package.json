@@ -1,0 +1,33 @@
+{
+  "name": "grunt-buddha-test",
+  "version": "0.0.1",
+  "description": "Buddha\\'s grace illuminates code as sunshine",
+  "repository": "https://github.com/lynnlee0522/grunt-buddha.git",
+  "author": {
+    "name": "lilin",
+    "email": "lilin@laiye.com"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "grunt": "~0.4.2",
+    "jshint-stylish": "~0.1.5",
+    "load-grunt-tasks": "~0.3.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}
