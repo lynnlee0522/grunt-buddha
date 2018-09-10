@@ -27,19 +27,23 @@ exports.buddha_test = {
     // setup here if necessary
     done();
   },
+  // 测试单元
   default_options: function (test) {
+    // 用来声明这个测试单元内有多少个断言要执行,确保所有的cb和assert都被执行到
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options');
+    // 将实际生成的合并后的文件读取进来
+    var actual = grunt.file.read('test/fixtures/test1.js');
+    // 将测试用例中提前写好的认为正确的文件读取进来
     var expected = grunt.file.read('test/expected/default_options');
+    // 比较这两个文件是否相等
     test.equal(actual, expected, 'should describe what the default behavior is.');
 
     test.done();
   },
   custom_options: function (test) {
     test.expect(1);
-
-    var actual = grunt.file.read('tmp/custom_options');
+    var actual = grunt.file.read('test/fixtures/test1.js');
     var expected = grunt.file.read('test/expected/custom_options');
     test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
 

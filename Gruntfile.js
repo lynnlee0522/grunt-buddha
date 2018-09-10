@@ -37,17 +37,19 @@ module.exports = function (grunt) {
         who: 'buddha',
         commentSymbol: '//'
       },
-      dist: ['text/fixtures/*.js']
+      dist: ['test/fixtures/*.js']
     },
 
     // Unit tests.
     nodeunit: {
+      // 指向测试脚本
       tests: ['test/*_test.js']
     }
 
   });
 
   // Actually load this plugin's task(s).
+  // 从指定目录加载task相关的文件，一般用grunt加载本地的grunt插件都会用这个方法
   grunt.loadTasks('tasks');
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
